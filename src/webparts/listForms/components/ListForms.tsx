@@ -71,7 +71,7 @@ export default class ListForms extends React.Component<IListFormsProps,ListState
     })
     const urlParams = new URLSearchParams(window.location.search);
     
-    const itemId = urlParams.get('ID');
+    const itemId = urlParams.get('itemId');
     console.log(itemId);  // Get the ID from the query string
     
     if (itemId) {
