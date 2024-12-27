@@ -33,7 +33,7 @@ export default class ListForms extends React.Component<IListFormsProps,ListState
     }
     return (
       <div className={styles['sp-display-form']}>
-      <h2>{item.Title}</h2>
+      <h2>Announcements</h2>
       <div className={styles["sp-form-section"]}>
         <label className={styles["sp-form-label"]}>Title:</label>
         <div className={styles["sp-form-value"]}>{item.Title}</div>
@@ -73,12 +73,12 @@ export default class ListForms extends React.Component<IListFormsProps,ListState
     
     const itemId = urlParams.get('ID');
     console.log(itemId);  // Get the ID from the query string
-    const queryID=2
-    if (queryID) {
+    
+    if (itemId) {
       console.log(itemId)
       // Fetch the list item using PnPjs
       sp.web.lists.getByTitle('Latest Announcements')  // Replace with your list name
-        .items.getById(Number(queryID))  // Use the ID as a number
+        .items.getById(Number(itemId))  // Use the ID as a number
         .get()
         .then((item) => {
           this.setState({

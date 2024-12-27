@@ -1,15 +1,24 @@
 @import '~@fluentui/react/dist/sass/References.scss';
 
-
 .sp-display-form {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 20px;
   background-color: #f8f9fa;
   border: 1px solid #ddd;
   border-radius: 5px;
-  width: 50%;
-  margin: 0 auto;
+  width: 100%; /* Take the full width of the container */
+  margin: 0; /* Remove any automatic centering */
+  text-align: left; /* Left-align the content */
 }
+// .sp-display-form {
+//   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+//   padding: 20px;
+//   background-color: #f8f9fa;
+//   border: 1px solid #ddd;
+//   border-radius: 5px;
+//   width: 50%;
+//   margin: 0 auto;
+// }
 
 .sp-form-section {
   margin-bottom: 15px;
@@ -30,13 +39,20 @@
   color: #333;
 }
 
+// .sp-form-image {
+//   max-width: 100%;
+//   height: auto;
+//   border-radius: 5px;
+//   margin-top: 10px;
+// }
+
 .sp-form-image {
-  max-width: 100%;
-  height: auto;
+  width: 100%; /* Ensures the image takes up full width of its container */
+  height: auto; /* Maintains the aspect ratio */
+  max-width: 400px; /* Sets a maximum width */
   border-radius: 5px;
   margin-top: 10px;
 }
-
 
 .listForms {
   overflow: hidden;
