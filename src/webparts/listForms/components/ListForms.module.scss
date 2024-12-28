@@ -10,6 +10,74 @@
   margin: 0; /* Remove any automatic centering */
   text-align: left; /* Left-align the content */
 }
+.header1{
+h2 {
+  color: #0078d4;
+}
+}
+
+.webPartContainer {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.header {
+  background-color: #3578e5;
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+
+.imageContainer {
+  text-align: center;
+  margin: 20px 0;
+  width: 100%; /* Ensure the container spans its parent's width */
+  height: 230px; /* Set the desired height for the container */
+  position: relative; /* Enable absolute positioning for child elements */
+  overflow: hidden; /* Ensures no image overflow outside the container */
+}
+
+.imageContainer img {
+  width: 100%; /* Make the image span the container's width */
+  height: 100%; /* Make the image span the container's height */
+  object-fit: cover; /* Ensures the image covers the container without distortion */
+  position: absolute; /* Aligns the image within the container */
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+}
+
+
+
+
+// .imageContainer {
+//   text-align: center;
+//   margin: 20px 0;
+// }
+
+.image {
+  margin: 20px 0;
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.subHeader {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+
 // .sp-display-form {
 //   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 //   padding: 20px;

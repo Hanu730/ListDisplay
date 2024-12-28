@@ -32,34 +32,48 @@ export default class ListForms extends React.Component<IListFormsProps,ListState
       return <div>Error: {error}</div>;
     }
     return (
-      <div className={styles['sp-display-form']}>
-      <h2>Announcements</h2>
-      <div className={styles["sp-form-section"]}>
-        <label className={styles["sp-form-label"]}>Title:</label>
-        <div className={styles["sp-form-value"]}>{item.Title}</div>
+      <div className={styles.webPartContainer}>
+      <div className={styles.header}>
+        {item.Title}
       </div>
-      <div className={styles["sp-form-section"]}>
-        <label className={styles["sp-form-label"]}>Body:</label>
-        <div className={styles["sp-form-value"]} dangerouslySetInnerHTML={{ __html: item.Body }} />
+      <div className={styles.imageContainer}>
+        <img
+          src={item.ImageUrl.Url} // Replace with the actual image URL
+          alt="Welcome"
+          
+        />
+     </div>
+      <div className={styles.description} dangerouslySetInnerHTML={{ __html: item.Body }}>
+        {/* <p>
+          We are excited to announce the launch of our new employee intranet portal built on SharePoint! This portal will be your go-to place for all company-related news, resources, tools, and information. Whether you're looking for HR documents, team collaboration spaces, or the latest company updates, everything is now available in one convenient place.
+        </p> */}
       </div>
-
-      <div className={styles["sp-form-section"]}>
-        <label className={styles["sp-form-label"]}>Description:</label>
-        <div className={styles["sp-form-value"]}>{item.Description}</div>
-      </div>
-
-      <div className={styles["sp-form-section"]}>
-        <label className={styles["sp-form-label"]}>Expires:</label>
-        <div className={styles["sp-form-value"]}>{item.Expires ? new Date(item.Expires).toLocaleDateString() : 'N/A'}</div>
-      </div>
-
-      {item.ImageUrl && (
-        <div className={styles["sp-form-section"]}>
-          <label className={styles["sp-form-label"]}>Image:</label>
-          <img src={item.ImageUrl.Url} alt="Item Image" className={styles["sp-form-image"]} />
-        </div>
-      )}
+     
     </div>
+    //   <div className={styles['sp-display-form']}>
+    //   <h2 className={styles.header1} >{item.Title}</h2>
+    //   <div className={styles["sp-form-section"]}>
+    //     <label className={styles["sp-form-label"]}>Body:</label>
+    //     <div className={styles["sp-form-value"]} dangerouslySetInnerHTML={{ __html: item.Body }} />
+    //   </div>
+
+    //   <div className={styles["sp-form-section"]}>
+    //     <label className={styles["sp-form-label"]}>Description:</label>
+    //     <div className={styles["sp-form-value"]}>{item.Description}</div>
+    //   </div>
+
+    //   <div className={styles["sp-form-section"]}>
+    //     <label className={styles["sp-form-label"]}>Expires:</label>
+    //     <div className={styles["sp-form-value"]}>{item.Expires ? new Date(item.Expires).toLocaleDateString() : 'N/A'}</div>
+    //   </div>
+
+    //   {item.ImageUrl && (
+    //     <div className={styles["sp-form-section"]}>
+    //       <label className={styles["sp-form-label"]}>Image:</label>
+    //       <img src={item.ImageUrl.Url} alt="Item Image" className={styles["sp-form-image"]} />
+    //     </div>
+    //   )}
+    // </div>
     );
   }
   componentDidMount() {
