@@ -4,4 +4,5 @@ export interface IListFormsProps {
   environmentMessage: string;
   hasTeamsContext: boolean;
   userDisplayName: string;
+  context:any;
 }

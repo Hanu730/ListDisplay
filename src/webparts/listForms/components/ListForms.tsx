@@ -29,7 +29,7 @@ export default class ListForms extends React.Component<IListFormsProps,ListState
     }
 
     if (error) {
-      return <div>Error: {error}</div>;
+      return <div>Error {error}</div>;
     }
     return (
       <div className={styles.webPartContainer}>
@@ -80,18 +80,20 @@ export default class ListForms extends React.Component<IListFormsProps,ListState
     sp.setup({
       spfxContext:this.context,
       sp: {
-         baseUrl: "https://websyn.sharepoint.com/sites/Websyn-Intranet-UAT", // Replace with your site URL
+         baseUrl: this.props.context.pageContext.web.absoluteUrl, // Replace with your site URL
       },
     })
     const urlParams = new URLSearchParams(window.location.search);
+  
     
     const itemId = urlParams.get('itemId');
+    const listName = urlParams.get('list');
     console.log(itemId);  // Get the ID from the query string
     
     if (itemId) {
       console.log(itemId)
       // Fetch the list item using PnPjs
-      sp.web.lists.getByTitle('Latest Announcements')  // Replace with your list name
+      sp.web.lists.getByTitle(listName+"")  // Replace with your list name
         .items.getById(Number(itemId))  // Use the ID as a number
         .get()
         .then((item) => {

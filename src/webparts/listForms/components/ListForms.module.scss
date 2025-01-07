@@ -43,7 +43,7 @@ h2 {
 .imageContainer img {
   width: 100%; /* Make the image span the container's width */
   height: 100%; /* Make the image span the container's height */
-  object-fit: cover; /* Ensures the image covers the container without distortion */
+  object-fit: fill; /* Ensures the image covers the container without distortion */
   position: absolute; /* Aligns the image within the container */
   top: 0;
   left: 0;
